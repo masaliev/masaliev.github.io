@@ -1,0 +1,422 @@
+/* ========== Reset & Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+/* ========== Navigation ========== */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* ========== Hero (Home Page) ========== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.hero-status {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========== Buttons ========== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: #eff6ff;
+    transform: translateY(-2px);
+}
+
+/* ========== Skills Section (Home Page) ========== */
+.skills {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.skill-card span {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* ========== Resume Container ========== */
+.resume-actions {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 2rem auto 4rem;
+    padding: 3rem;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+}
+
+/* ========== Resume Header ========== */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resume-header-left h1 {
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.resume-header-left h2 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.resume-header-right p {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--primary);
+}
+
+.contact-link i {
+    width: 20px;
+    color: var(--primary);
+}
+
+.resume-divider {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 1.5rem 0;
+}
+
+/* ========== Resume Sections ========== */
+.resume-section {
+    margin-bottom: 1.8rem;
+}
+
+.resume-section h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-item {
+    margin-bottom: 1.2rem;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.resume-item-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--dark);
+}
+
+.resume-item-date {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    white-space: nowrap;
+}
+
+.resume-item-subtitle {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 0.3rem;
+}
+
+.resume-item ul,
+.resume-section ul {
+    padding-left: 1.5rem;
+    color: var(--dark);
+}
+
+.resume-item li,
+.resume-section li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* ========== Skill Categories (Resume) ========== */
+.skill-category {
+    margin-bottom: 1rem;
+}
+
+.skill-category strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ========== Compact Skills (Resume) ========== */
+.skills-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1.5rem;
+}
+
+.skill-row {
+    display: flex;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.skill-label {
+    font-weight: 600;
+    color: var(--dark);
+    white-space: nowrap;
+    min-width: 110px;
+}
+
+.skill-value {
+    color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+    .skills-compact {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+    }
+
+    .resume-item-header {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,88 @@
+/* ========== Print Styles ========== */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    /* Hide navigation, buttons, and footer */
+    .navbar,
+    .resume-actions,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Full-width resume */
+    .resume-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0 1cm;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .resume-header {
+        margin-top: 1cm;
+    }
+
+    .resume-header-left h1 {
+        font-size: 22pt;
+    }
+
+    .resume-header-left h2 {
+        font-size: 13pt;
+    }
+
+    .resume-divider {
+        border-color: #333;
+    }
+
+    .resume-section h3 {
+        color: black;
+        font-size: 13pt;
+        border-bottom: 1px solid #333;
+        padding-bottom: 4px;
+    }
+
+    .resume-item-title {
+        color: black;
+    }
+
+    .resume-item-subtitle {
+        color: #444;
+    }
+
+    .resume-item-date {
+        color: #555;
+    }
+
+    .skill-tag {
+        background: #f0f0f0;
+        color: black;
+        border: 1px solid #ccc;
+    }
+
+    .resume-section h3 i {
+        font-size: 0.9em;
+    }
+
+    @page {
+        margin: 1.5cm;
+    }
+
+    .skills-compact {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.2rem 1rem;
+    }
+
+    .skill-label {
+        color: black;
+    }
+
+    .skill-value {
+        color: #333;
+    }
+}
